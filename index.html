@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular-require</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body >
+        <div class="container-fluid" style="display: none;" id="content">
+            <div class="row">
+                <div class="col-sm-12 nopadding" ui-view>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div style="width:131px;margin: 80px auto;" id="preloader">
+                <img src="resources/img/logo.png" alt="Angular-require" width="131" height="122">
+                <img src="resources/img/load.gif" alt="Загрузка" width="131" height="20">
+        </div>
+
+        <script src="bower_components/requirejs/require.js" data-main="app/main.js"></script>
+    </body>
+</html>

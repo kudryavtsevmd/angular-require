@@ -1,0 +1,72 @@
+
+<div class="navbar navbar-fixed-top" role="navigation" style="background-color: #155d83;color:#fff;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 nopadding">
+                <div class="app-nav-center-block">
+                    <!-- Распорка -->
+                    <div style="width: 20px; display: inline-block; position: relative;">&nbsp;</div>
+                    {{header}}
+                    <img ng-show="loading" width="20" alt="Загрузка" src="resources/img/load_top.gif">
+                    <div ng-show="!loading" style="width: 20px; display: inline-block; position: relative;">&nbsp;</div>
+                </div>
+                <div class="app-nav-block app-pull-left " mouse-down ng-click="backClick()" ng-show="!isRoot()">
+                    <span class="sprite-left"></span>
+
+                </div>
+                <div class="app-nav-block app-pull-right" mouse-down  ng-click="logout()">
+                    <img width="14" height="12" align="right" alt="Добавить" style="margin:5px 0;" src="resources/img/glyphicons/logout.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-sm-12 nopadding" style="top:50px;">
+            <div class="container-fluid" >
+                <div class="row"  ng-show="isRoot()">
+                    <div class="col-sm-12 nopadding">
+                        <table class="table app-table">
+                            <tbody>
+                                <tr ng-repeat="record in menu.list">
+                                    <td ui-sref="{{record.sref}}"
+                                        ng-click="click()"
+                                        mouse-down>
+                                        <span >{{record.name}}</span>
+                                    </td>
+                                    <td width="20" ui-sref="{{record.addSref}}"
+                                        ng-click="click()"
+                                        mouse-down>
+                                        <img src="resources/img/glyphicons/plus_333.gif" width="17" height="17" align="right"  style="margin:3px 10px;" alt="Добавить">
+                                    </td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 nopadding" ui-view="content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar navbar-fixed-bottom" style="color:#fff;;height:50px" ng-show="alerts.length>0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 nopadding">
+                <alert ng-repeat="alert in alerts" type="{{alert.type}}" dismiss-on-timeout="2500" close="closeAlert($index)">{{alert.msg}}</alert>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

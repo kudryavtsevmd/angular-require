@@ -1,0 +1,34 @@
+{
+  "name": "angular-require",
+  "version": "0.0.1",
+  "description": "Реализация модульности angular средствами requirejs",
+  "main": "index.html",
+  "keywords": [
+    "require",
+    "angular"
+  ],
+  "authors": [
+    "Кудрявцев М.Д."
+  ],
+  "license": "MIT",
+  "homepage": "-",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-i18n": "~1.4.5",
+    "angular-touch": "~1.4.5",
+    "jquery-cookie": "~1.4.1",
+    "angular-bootstrap": "~0.13.4",
+    "angular-ui-router": "~0.2.15",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.20",
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.6",
+    "ng-file-upload": "~7.2.1"
+  }
+}

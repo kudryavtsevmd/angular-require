@@ -1,0 +1,91 @@
+/* Переопределяем размер шрифта*/
+@media screen and (min-width:390px) { /* Минимум 512 цветов */
+    .input-group-addon,
+    .form-control{
+        font-size: 16px;
+    }
+}
+
+/* Убираем отсутп  у col-sm */
+.nopadding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+input.ng-invalid, textarea.ng-invalid, select.ng-invalid {
+    border-color: #e9322d !important;
+    box-shadow: 0 0 6px #f8b9b7 !important;
+}
+table.app-table > tbody > tr > td{
+    font-size: 18px;
+    padding: 15px;
+    cursor: pointer;
+}
+table.app-table span{
+    padding: 0 5px;
+    font-size: 18px;
+}
+table.app-table sub{
+    color:#78808a;
+}
+table.app-table sup{
+    color:#78808a;
+    float: right;
+    padding:10px 0 0 0;
+}
+table.app-table td.disabled-cell{
+    background-color: #607D8B;
+}
+table.app-table  td.disabled-cell > span,
+table.app-table  td.disabled-cell > sub,
+table.app-table  td.disabled-cell > sup{
+    color: #fff;
+}
+
+table > tbody > tr > td.mousedown{
+    background-color:#c1ddf1;
+}
+/* МЕНЮ НАВИГАЙИОННОЕ */
+.app-nav-center-block{
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    color:#fff;
+}
+.app-nav-block{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 15px;
+}
+.app-pull-left{
+    float:left;
+    font-size: 18px;
+    color:#fff;
+}
+.app-pull-right{
+    float:right;
+}
+div.mousedown {
+    color:#c1ddf1;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+span.sprite-left {
+    background-image: url("../img/sprite/left.gif");
+    height: 14px;
+    width: 10px;
+    display: inline-block;
+    background-position: 0px 0px;
+    background-repeat: none;
+}
+div.mousedown > span.sprite-left {
+    background-position: 0px 14px;
+}
+
+
